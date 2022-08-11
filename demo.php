@@ -1,22 +1,120 @@
 <?php
-$insultes = ['merde', 'con'];
-$acronyms = [];
-foreach ($insultes as $insulte) {
-  $firstLetter = mb_substr($insulte, 0, 1);
-  array_push($acronyms, $firstLetter);
+
+function repondre_oui_non(string $question): bool {
+  while (true) {
+    $result = readline("$question (o/n): ");
+    if ($result === "o") {
+      return true;
+    } elseif ($result === "n") {
+      return false;
+    }
+    echo "veuillez sélectionner 'o' ou 'n'\n";
+  }
 }
 
-$asterisques = [];
-foreach($insultes as $insulte) {
-  $asterisques[] = str_repeat('*', (strlen($insulte) - 1));
+function demander_creneau(?string $phrase = 'Veuillez entrer un creneau'): array {
+  echo $phrase . "\n";
+  while (true) {
+    $ouverture = (int)readline('heure d\'ouverture :');
+    if ($ouverture >= 0 && $ouverture <= 23) {
+      break;
+    }
+  }
+  while (true) {
+    $fermeture = (int)readline('heure de fermeture :');
+    if ($fermeture >= 0 && $fermeture <= 23 && $fermeture > $ouverture) {
+      break;
+    }
+  }
+
+  return [$ouverture, $fermeture];
 }
 
-$newWords = substr_replace($acronyms, $asterisques, 1, 0);
+$horaire = [];
 
-$phrase = readline("Rentrez une phrase: \n");
-$phrase = str_replace($insultes, $newWords, $phrase);
+function demander_creneaux(?string $phrase = 'Veuillez entrer vos creneaux'): array {
+  $horaire[] = demander_creneau($phrase);
+  while (true) {
+    if (repondre_oui_non("voulez-vous rentrer un nouveau créneau?")) {
+      $horaire[] = demander_creneau($phrase);
+    } else {
+      return $horaire;
+    }
+  }
+  return $horaire;
+}
 
-echo $phrase;
+$creneaux = demander_creneaux("Entrez vos creneaux");
+
+var_dump($creneaux);
+
+// $resultat = repondre_oui_non('voulez vous continuer?');
+
+// function demander_creneau($phrase = null) {
+//   if ($phrase === null) {
+//     $phrase = "Veuillez entrer votre créneau";
+//   }
+
+//   $creneaux = [];
+
+//   while (true) {
+//     $debut = (int)readline($phrase);
+//     $fin = (int)readline($phrase);
+//     if ($debut >= $fin) {
+//       echo "Le créneau ne peut être enregistré car l'heure d'ouverture ($debut) est supérieure à l'heure de fermeture ($fin)";
+//     } elseif (($debut < 0 || $debut > 23) || ($fin < 0 || $fin > 23) ) {
+//       echo "Le créneau ne peut être enregistré car l'heure d'ouverture ($debut) ou de fermeture ($fin) n'est pas bon";
+//     }
+//     else {
+//       $creneaux[] = [$debut, $fin];
+//       $action = readline('Entrez un nouveau creneau? (n)');
+//       if ($action === 'n') {
+//         break;
+//       }
+//     }
+//   }
+//   echo 'Le magasin sera ouvert de';
+//   foreach ($creneaux as $k => $creneau) {
+//     if ($k >0) {
+//       echo ' et de';
+//     }
+//     echo ' ' . $creneau[0] . 'h à ' . $creneau[1] . 'h';
+//   }
+// }
+
+// $creneau = demander_creneau();
+
+// echo "nouveau creneau par la seconde fonction: \n";
+// $creneau2 = demander_creneau("veuillez entrer une horaire");
+
+// function bonjour($nom = null) {
+//   if ($nom === null) {
+//     return "Bonjour\n";
+//   }
+//   return 'Bonjour ' . $nom . "\n";
+// }
+
+// $salutations = bonjour();
+// echo $salutations;
+
+// $insultes = ['merde', 'con'];
+// $acronyms = [];
+// foreach ($insultes as $insulte) {
+//   $firstLetter = mb_substr($insulte, 0, 1);
+//   array_push($acronyms, $firstLetter);
+// }
+
+// $asterisques = [];
+// foreach($insultes as $insulte) {
+//   $asterisques[] = str_repeat('*', (strlen($insulte) - 1));
+// }
+
+// $newWords = substr_replace($acronyms, $asterisques, 1, 0);
+
+// $phrase = readline("Rentrez une phrase: \n");
+// $phrase = str_replace($insultes, $newWords, $phrase);
+
+// echo $phrase;
 
 // foreach ($insultes as $insulte) {
 //   if (str_contains($phrase, $insulte)) {
