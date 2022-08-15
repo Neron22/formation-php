@@ -1,5 +1,5 @@
 <?php
-require 'functions.php';
+require_once 'functions.php';
 // Checkbox
 $parfums = [
   'Fraise' => 4,
