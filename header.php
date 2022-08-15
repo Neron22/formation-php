@@ -69,3 +69,4 @@
     </nav>
 
     <main role="main" class="container">
+    <?php require 'functions.php'?>
