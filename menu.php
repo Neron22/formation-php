@@ -14,6 +14,7 @@ if (!function_exists('nav_item')) {
 }
 ?>
 
-<?= nav_item('/index.php', 'Accueil'); ?>
-<?= nav_item('/blog.php', 'Blog'); ?>
-<?= nav_item('/contact.php', 'Contact'); ?>
+<?= nav_item('/index.php', 'Sales'); ?>
+<?= nav_item('/blog.php', 'Top management'); ?>
+<?= nav_item('/contact.php', 'Sales Ops'); ?>
+<?= nav_item('/contact.php', 'Finance'); ?>
