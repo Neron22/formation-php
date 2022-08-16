@@ -414,4 +414,24 @@ body {
 .card-info-right .card-editor-info {
   margin-left: 24px;
 }
+
+.row {
+  margin-top: 32px;
+}
+
+.col-md-6 img {
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.col-md-4 {
+  margin-left: 140px;
+}
+
+.col-md-4 ul {
+  padding: 17px;
+}
 /*# sourceMappingURL=index.css.map */

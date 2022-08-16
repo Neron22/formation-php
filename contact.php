@@ -10,39 +10,48 @@ $ouvert = in_creneaux($heure, $creneaux);
 $color = $ouvert ? 'green' : 'red';
 ?>
 
-<div class="row">
-  <div class="col-md-8">
-    <h2>Contactez-nous !</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ducimus nemo at facere mollitia, quibusdam magnam ratione omnis dicta magni eum est tempora atque impedit nam quia cumque! Beatae, minima?</p>
+<div class="container">
+  <div class="hero-title-section">
+    <div class="white-circle">
+      <div class="smiley-rose">
+      </div>
+    </div>
   </div>
-  <div class="col-md-4">
-    <h2>Horaires d'ouverture</h2>
-    <?php if ($ouvert): ?>
-    <div class="alert alert-success">
-      Le magasin sera ouvert.
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Contactez-nous !</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ducimus nemo at facere mollitia, quibusdam magnam ratione omnis dicta magni eum est tempora atque impedit nam quia cumque! Beatae, minima?</p>
+      <img src="./assets/images/Bertagne.png" alt="">
     </div>
-    <?php else: ?>
-    <div class="alert alert-danger">
-      Le magasin sera fermé.
+    <div class="col-md-4 center">
+      <h2>Horaires d'ouverture</h2>
+      <?php if ($ouvert): ?>
+      <div class="alert alert-success">
+        Le magasin sera ouvert.
+      </div>
+      <?php else: ?>
+      <div class="alert alert-danger">
+        Le magasin sera fermé.
+      </div>
+      <?php endif ?>
+      <form action="" method="GET">
+        <div class="form-group">
+          <?= select('jour', $jour, JOURS)?>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="number" name="heure" value="<?= $heure ?>">
+        </div>
+        <button class="btn btn-primary" type="submit">Voir si le magasin est ouvert</button>
+      </form>
+      <ul>
+        <?php foreach (JOURS as $k => $jour) : ?>
+          <li>
+            <strong><?=$jour?>:</strong>
+            <?=creneaux_html(CRENEAUX[$k])?>
+          </li>
+        <?php endforeach ?>
+      </ul>
     </div>
-    <?php endif ?>
-    <form action="" method="GET">
-      <div class="form-group">
-        <?= select('jour', $jour, JOURS)?>
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="number" name="heure" value="<?= $heure ?>">
-      </div>
-      <button class="btn btn-primary" type="submit">Voir si le magasin est ouvert</button>
-    </form>
-    <ul>
-      <?php foreach (JOURS as $k => $jour) : ?>
-        <li>
-          <strong><?=$jour?>:</strong>
-          <?=creneaux_html(CRENEAUX[$k])?>
-        </li>
-      <?php endforeach ?>
-    </ul>
   </div>
 </div>
 
