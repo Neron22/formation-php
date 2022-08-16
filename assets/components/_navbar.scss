@@ -1,0 +1,78 @@
+body {
+  background-color: #fcf8f2 !important;
+}
+
+.navbar-collapse {
+  margin: 24px 16px 0 16px;
+  justify-content: center !important;
+  align-items: center;
+}
+.navbar-nav {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  flex-grow: 1;
+}
+.navbar-logo {
+  height: 40px;
+  position: relative;
+  &::after {
+    content: "New blog!";
+    position: absolute;
+    top: 79px;
+    left: 160px;
+    width: 200px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(338deg);
+    color: #43505C;
+    font-size: 12px;
+  }
+
+}
+.navbar-logo2 {
+  position: absolute;
+  color: #43505C;
+  background-color: white;
+  border: 2px solid #43505C;
+  border-radius: 4px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 33px;
+  text-align: center;
+  line-height: 16px;
+  left: 122px;
+  top: 32px;
+}
+
+.navbar-logo-arrow{
+  position: absolute;
+  height: 40px;
+  left: 66px;
+  top: 33px;
+  transform: rotate(358deg);
+}
+
+.form-inline {
+  padding-left: 40px;
+}
+
+.nav-item {
+  a{
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important;
+    color:#43505C;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0.6rem;
+}
+
+.btn-primary {
+  background-color: #4846ff !important;
+}

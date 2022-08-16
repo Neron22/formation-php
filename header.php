@@ -15,7 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./assets/components/index.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -45,25 +45,30 @@
           }
         </style>
 
-
-        <!-- Custom styles for this template -->
-        <link href="starter-template.css" rel="stylesheet">
       </head>
       <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
-      <a class="navbar-brand" href="/index.php">Mon site</a>
+    <nav class="navbar navbar-expand-md mb-5">
+      <a class="navbar-brand" href="/index.php"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+        <div class="navbar-logo">
+          <img src="./assets/images/logoipsum-239.svg" alt="logo ipsum">
+          <div class="navbar-logo2">
+            Blog
+          </div>
+          <div class="navbar-logo-arrow">
+            <img src="./assets/images/arrow.png" class="navbar-logo-arrow" alt="">
+          </div>
+        </div>
+        <ul class="navbar-nav">
           <?php require 'menu.php'; ?>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Subscribe</button>
         </form>
       </div>
     </nav>

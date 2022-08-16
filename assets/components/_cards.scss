@@ -1,0 +1,152 @@
+@media (min-width: 1200px){
+  .container {
+      max-width: 1280px;
+  }
+}
+
+.container-cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 660px;
+  margin: 100px auto;
+}
+
+.main-card-left {
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: white;
+  padding: 12px;
+  margin-right: 16px;
+  .card-left-img {
+    height: 60%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 9px 20px 6px #d1d0e0cf;
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+  }
+  .card-sub-img-info {
+    margin-left: 16px;
+    margin-top: 20px;
+    padding: 8px;
+  }
+}
+
+.card-sub-img-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .card-sub-img-rounded-info {
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    padding: 4px 16px;
+    font-size: 11px;
+  }
+  .card-sub-img-info-read {
+    margin-left: 12px;
+    font-size: 11px;
+  }
+}
+
+.main-card-title {
+  margin-top: 8px;
+  margin-left: 16px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.card-editor-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 16px;
+  margin-top: 24px;
+  .card-editor-info-rounded-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid black;
+    img {
+      width: 44px;
+      height: 44px;
+      border-radius: 44px;
+    }
+  }
+  .card-editor-info-right {
+    padding-left: 12px;
+    .card-editor-info-name {
+      font-weight: 600;
+      padding: 2px;
+    }
+    .card-editor-info-date {
+      font-size: 12px;
+      color: grey;
+      padding: 2px;
+    }
+  }
+}
+
+// CARTE DE DROITE !!!!
+.cards-right {
+  height: 100%;
+  width: 50%;
+  margin-right: 16px;
+}
+.card-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 32px 16px;
+  flex-grow: 0.5;
+  height: 28%;
+  width: 100%;
+  overflow: hidden;
+  .card-img-left {
+    border-radius: 8px;
+    max-width: 50%;
+    overflow: hidden;
+    height: 100%;
+    img {
+      max-width: 100%;
+      flex-shrink: 0;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+.card-info-right {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  flex-direction: column;
+  height: 100%;
+  .card-sub-img-info {
+    margin-left: 24px;
+  }
+  .card-title {
+    padding-top: 12px;
+    margin-bottom: 0;
+    margin-left: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  .card-editor-info{
+    margin-left: 24px;
+  }
+}
