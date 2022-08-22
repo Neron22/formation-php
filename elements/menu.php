@@ -19,3 +19,5 @@ if (!function_exists('nav_item')) {
 <?= nav_item('/menu.php', 'Menu'); ?>
 <?= nav_item('/contact.php', 'Contact'); ?>
 <?= nav_item('/newsletter.php', 'Newsletter'); ?>
+<?= nav_item('/profil.php', 'Profil'); ?>
+<?= nav_item('/nsfw.php', 'Nsfw'); ?>
