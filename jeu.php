@@ -42,7 +42,7 @@ if (isset($_GET['cornet'])) {
     $total += $cornets[$cornet];
   };
 }
-require 'header.php';
+require './elements/header.php';
 ?>
 
 <h1><?=$title?></h1>

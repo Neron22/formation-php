@@ -65,7 +65,7 @@
           </div>
         </div>
         <ul class="navbar-nav">
-          <?php require 'menu.php'; ?>
+          <?php require './elements/menu.php'; ?>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <button class="btn btn-primary my-2 my-sm-0" type="submit">Subscribe</button>
@@ -74,4 +74,3 @@
     </nav>
 
     <main role="main" class="container">
-    <?php require 'functions.php'?>

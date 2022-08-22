@@ -1,7 +1,8 @@
 <?php
 $title = "Contact";
-require 'header.php';
-require_once 'config.php';
+require './elements/header.php';
+require_once './data/config.php';
+require_once 'functions.php';
 date_default_timezone_set('Europe/Paris');
 $heure = (int)($_GET['heure'] ?? date('G'));
 $jour = (int)($_GET['jour'] ?? date('N')- 1);
@@ -56,4 +57,4 @@ $color = $ouvert ? 'green' : 'red';
 </div>
 
 
-<?php require 'footer.php' ?>
+<?php require './elements/footer.php' ?>
