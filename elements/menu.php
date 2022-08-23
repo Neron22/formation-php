@@ -21,3 +21,4 @@ if (!function_exists('nav_item')) {
 <?= nav_item('/newsletter.php', 'Newsletter'); ?>
 <?= nav_item('/profil.php', 'Profil'); ?>
 <?= nav_item('/nsfw.php', 'Nsfw'); ?>
+<?= nav_item('/dashboard.php', 'Dashboard'); ?>
