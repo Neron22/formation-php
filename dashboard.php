@@ -1,5 +1,7 @@
 <?php
-require "functions/compteur.php";
+require_once "functions/auth.php";
+forcer_utilisateur_connecte();
+require_once "functions/compteur.php";
 $title = "Dashboard";
 $annee = (int)date('Y');
 $annee_selection = empty($_GET['annee']) ? null : (int)$_GET['annee'];
@@ -35,6 +37,17 @@ require_once 'functions.php';
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Bienvenue sur votre dashboard !</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ducimus nemo at facere mollitia, quibusdam magnam ratione omnis dicta magni eum est tempora atque impedit nam quia cumque! Beatae, minima?</p>
+    </div>
+    <div class="col-md-4 center">
+        <h1>Hello John !</h1>
+    </div>
+  </div>
+
 
   <div class="row">
     <div class="col-lg-4">

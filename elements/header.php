@@ -1,3 +1,6 @@
+<?php
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR .'auth.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -68,7 +71,11 @@
           <?php require './elements/menu.php'; ?>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">Subscribe</button>
+          <?php if(est_connecte()):?>
+            <a href= "/logout.php" class="nav-item nav-link my-2 my-sm-0" >Se déconnecter</a>
+          <?php else:?>
+            <a href= "/login.php" class="btn btn-primary my-2 my-sm-0" >Se connecter</a>
+          <?php endif?>
         </form>
       </div>
     </nav>

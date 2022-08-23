@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR .'auth.php';
 if (!function_exists('nav_item')) {
   function nav_item (string $lien, string $titre): string {
     $classe = 'nav-link';
@@ -19,6 +20,7 @@ if (!function_exists('nav_item')) {
 <?= nav_item('/menu.php', 'Menu'); ?>
 <?= nav_item('/contact.php', 'Contact'); ?>
 <?= nav_item('/newsletter.php', 'Newsletter'); ?>
-<?= nav_item('/profil.php', 'Profil'); ?>
 <?= nav_item('/nsfw.php', 'Nsfw'); ?>
-<?= nav_item('/dashboard.php', 'Dashboard'); ?>
+<?php if (est_connecte()): ?>
+  <?= nav_item('/dashboard.php', 'Dashboard'); ?>
+<?php endif?>

@@ -1,11 +1,9 @@
   </main>
-      <div class="row m-5 pt-5">
-        <div class="col-lg-4">
-          <h5 class="mt-5 ml-5">Navigation</h5>
-          <a class="mt-5 ml-5" href="http://localhost:8000/">Accueil</a>
+      <div class="footer-blog">
+        <div class="left">
+          <a href="http://localhost:8000/">Accueil</a>
         </div>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">
+        <div class="right">
           <?php
           require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
           ajouter_vue();
