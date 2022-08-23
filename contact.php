@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = "Contact";
 require './elements/header.php';
 require_once './data/config.php';
