@@ -2,3 +2,8 @@
 @import '_hero-title.scss';
 @import '_cards.scss';
 @import '_contact.scss';
+@import 'footer.scss';
+
+main {
+  min-height: 64vh;
+}

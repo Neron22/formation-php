@@ -434,4 +434,25 @@ body {
 .col-md-4 ul {
   padding: 17px;
 }
+
+.footer-blog {
+  margin: 72px auto 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(128, 128, 128, 0.328);
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 64px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main {
+  min-height: 64vh;
+}
 /*# sourceMappingURL=index.css.map */
