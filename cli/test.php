@@ -1,10 +1,16 @@
 <?php
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'Creneau.php';
-$creneau = new Creneau(10, 12);
-$creneau2 = new Creneau(15, 16);
-var_dump($creneau->intersect($creneau2));
+// require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'Creneau.php';
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'Form.php';
+echo Form::checkbox('demo', Form::$class, []);
 
-echo $creneau->toHTML();
+
+
+
+// $creneau = new Creneau(10, 12);
+// $creneau2 = new Creneau(15, 16);
+// var_dump($creneau->intersect($creneau2));
+
+// echo $creneau->toHTML();
 
 
 
