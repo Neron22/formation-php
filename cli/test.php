@@ -1,4 +1,18 @@
 <?php
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'Creneau.php';
+$creneau = new Creneau(10, 12);
+$creneau2 = new Creneau(15, 16);
+var_dump($creneau->intersect($creneau2));
+
+echo $creneau->toHTML();
+
+
+
+
+
+
+
+
 // $date = new DateTime('2022-01-01');
 // $interval = new DateInterval('P2M16DT1H46M');
 // $date->add($interval);
