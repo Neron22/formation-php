@@ -46,7 +46,6 @@ function demander_creneaux(?string $phrase = 'Veuillez entrer vos creneaux'): ar
 
 $creneaux = demander_creneaux("Entrez vos creneaux");
 
-var_dump($creneaux);
 
 // $resultat = repondre_oui_non('voulez vous continuer?');
 

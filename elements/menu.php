@@ -21,6 +21,7 @@ if (!function_exists('nav_item')) {
 <?= nav_item('/contact.php', 'Contact'); ?>
 <?= nav_item('/newsletter.php', 'Newsletter'); ?>
 <?= nav_item('/nsfw.php', 'Nsfw'); ?>
+<?= nav_item('/guestbook.php', 'Guestbook'); ?>
 <?php if (est_connecte()): ?>
   <?= nav_item('/dashboard.php', 'Dashboard'); ?>
 <?php endif?>
