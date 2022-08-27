@@ -1,5 +1,11 @@
 <?php
 
+
+/**
+ * Gère l'API d'Open Weather
+ *
+ * @author valentin valtest.com
+ */
 class OpenWeather {
 
   private $apiKey;
@@ -8,6 +14,16 @@ class OpenWeather {
   {
     $this->apiKey = $apiKey;
   }
+
+  /**
+ * Récupère les informations météorologique du jour
+ *
+ * @param string $city Ville (ex:'Trébeurden')
+ *
+ * @param string $city country (ex:'fr')
+ *
+ * @return array
+ */
 
   public function getForecast ($city, $country)
   {
