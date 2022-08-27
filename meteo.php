@@ -1,13 +1,9 @@
 <?php
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-$data = curl_exec($curl);
-if ($data === false) {
-  var_dump(curl_error($curl));
-} else {
-  $data = json_decode($data, true);
-  echo '<pre>';
-  var_dump($data);
-  echo '</pre>';
-}
-curl_close($curl);
+require __DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'OpenWeather.php';
+$meteo = new OpenWeather('3a1680017f33e7297cfefd94b672822d');
+$results = $meteo->getForecast('Trebeurden', 'fr');
+?>
+
+<h1>Meteo à Trébeurden:</h1>
+
+<p><?= $results['date']->format('d/m/Y') . ': ' . $results['description'] . ' - ' . $results['temp']?></p>
