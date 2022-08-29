@@ -204,6 +204,11 @@ body {
           transform: rotateX(37deg) rotateZ(13deg);
 }
 
+.width70 {
+  max-width: 70% !important;
+  margin: auto;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1280px;
