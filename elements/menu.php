@@ -16,7 +16,7 @@ if (!function_exists('nav_item')) {
 ?>
 
 <?= nav_item('/index.php', 'Accueil'); ?>
-<?= nav_item('/blog.php', 'Blog'); ?>
+<?= nav_item('/blog/indexblog.php', 'Blog'); ?>
 <?= nav_item('/menu.php', 'Menu'); ?>
 <?= nav_item('/contact.php', 'Contact'); ?>
 <?= nav_item('/newsletter.php', 'Newsletter'); ?>

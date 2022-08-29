@@ -18,7 +18,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/components/index.css">
+    <link rel="stylesheet" href="../assets/components/index.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -59,16 +59,16 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <div class="navbar-logo">
-          <img src="./assets/images/logoipsum-239.svg" alt="logo ipsum">
+          <img src= "../assets/images/logoipsum-239.svg" alt="logo ipsum">
           <div class="navbar-logo2">
             Blog
           </div>
           <div class="navbar-logo-arrow">
-            <img src="./assets/images/arrow.png" class="navbar-logo-arrow" alt="">
+            <img src="../assets/images/arrow.png" class="navbar-logo-arrow" alt="">
           </div>
         </div>
         <ul class="navbar-nav">
-          <?php require './elements/menu.php'; ?>
+          <?php require __DIR__ . DIRECTORY_SEPARATOR . 'menu.php'; ?>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <?php if(est_connecte()):?>
