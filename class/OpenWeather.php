@@ -1,5 +1,9 @@
 <?php
 
+namespace App;
+
+use DateTime;
+use Exception;
 
 /**
  * Gère l'API d'Open Weather

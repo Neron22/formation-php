@@ -1,5 +1,5 @@
 <?php
-namespace Neron22\Guestbook;
+namespace App\Guestbook;
 
 use \DateTime;
 use \DateTimeZone;

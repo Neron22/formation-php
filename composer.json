@@ -1,0 +1,15 @@
+{
+    "name": "neron22/grafikart-formation",
+    "autoload": {
+        "psr-4": {
+            "App\\": "class/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Valentin Renon",
+            "email": "valentin.renon@gmail.com"
+        }
+    ],
+    "require": {}
+}

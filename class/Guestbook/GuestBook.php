@@ -1,6 +1,6 @@
 <?php
 
-namespace Neron22\Guestbook;
+namespace App\Guestbook;
 
 require_once 'Message.php';
 class GuestBook {

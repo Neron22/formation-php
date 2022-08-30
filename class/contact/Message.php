@@ -1,5 +1,5 @@
 <?php
-namespace Neron22\contact;
+namespace App\Contact;
 
 class Message {
 
