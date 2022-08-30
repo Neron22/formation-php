@@ -42,7 +42,7 @@ require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'elements' . DIRECTORY_SEPARATO
         <h4><a href="/blog/editblog.php?id=<?= $post->id ?>"><?= htmlentities($post->name) ?></a></h4>
         <p class="small text-muted">Ecrit le <?= $post->created_at->format('d/m/Y à H:i')?></p>
         <p>
-          <?= nl2br(htmlentities($post->getExcerpt()))?>
+          <?= $post->getBody()?>
         </p>
       <?php endforeach ?>
     </ul>

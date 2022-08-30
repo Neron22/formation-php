@@ -1,8 +1,7 @@
 <?php
-
 namespace App;
 
-use DateTime;
+require '../vendor/erusev/parsedown/Parsedown.php';
 
 class Post {
 
@@ -17,12 +16,19 @@ class Post {
   public function __construct()
   {
     if (is_int($this->created_at)) {
-      $this->created_at = new DateTime('@' . $this->created_at);
+      $this->created_at = new \DateTime('@' . $this->created_at);
     }
   }
 
   public function getExcerpt(): string
   {
     return substr($this->content, 0, 150);
+  }
+
+  public function getBody(): string
+  {
+    $parseDown = new \Parsedown();
+    $parseDown->setSafeMode(true);
+    return  substr($parseDown->text($this->content), 0, 120);
   }
 }
