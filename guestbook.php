@@ -1,6 +1,8 @@
 <?php
-phpinfo();
-die();
+
+use Neron22\Guestbook\GuestBook;
+use Neron22\Guestbook\Message;
+
 require 'elements/header.php';
 require __DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'Message.php';
 require __DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'GuestBook.php';
