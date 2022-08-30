@@ -1,11 +1,11 @@
 <?php
-
-use Neron22\Guestbook\GuestBook;
-use Neron22\Guestbook\Message;
-
+require 'vendor/autoload.php';
 require 'elements/header.php';
-require __DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'Message.php';
-require __DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'GuestBook.php';
+use App\Guestbook\{
+  GuestBook,
+  Message
+};
+
 $errors = null;
 $success = false;
 $guestbook = new GuestBook(__DIR__ . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'messages');
